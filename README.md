@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Pré-requis
 
 Il est nécessaire d'avoir un environnement de développement web tel que WAMP/XAMP.
