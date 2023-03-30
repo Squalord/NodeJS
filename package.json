@@ -1,8 +1,8 @@
 {
   "name": "iut-project",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "BiblioNode",
+  "author": "Maxime NGUYEN",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -16,34 +16,37 @@
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
-    "@hapi/jwt": "^3.1.0",
+    "@hapi/jwt": "^2.0.1",
     "@hapipal/haute-couture": "4.x.x",
-    "@hapipal/schmervice": "^2.1.0",
-    "@hapipal/schwifty": "^6.2.0",
-    "haute-couture": "^3.6.1",
     "joi": "17.x.x",
-    "knex": "^2.4.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.20",
-    "schmervice": "^1.6.0"
+    "nodemailer": "^6.5.0",
+    "objection": "2.x.x",
+    "@hapipal/schmervice": "^2.0.0",
+    "@hapipal/schwifty": "6.x.x",
+    "exiting": "6.0.1"
+  },
+  "peerDependencies": {
+    "knex": "0.21.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
     "@hapi/eslint-config-hapi": "13.x.x",
     "@hapi/eslint-plugin-hapi": "4.x.x",
-    "@hapi/glue": "8.x.x",
+    "@hapi/glue": "^8.0.0",
     "@hapi/hapi": "20.x.x",
+    "@hapi/hoek": "9.x.x",
     "@hapi/inert": "6.x.x",
-    "@hapi/lab": "24.x.x",
+    "@hapi/lab": "23.x.x",
     "@hapi/vision": "6.x.x",
-    "@hapipal/confidence": "6.x.x",
-    "@hapipal/hpal": "3.x.x",
-    "@hapipal/hpal-debug": "2.x.x",
-    "@hapipal/toys": "3.x.x",
     "babel-eslint": "10.x.x",
+    "@hapipal/confidence": "6.x.x",
     "dotenv": "8.x.x",
     "eslint": "7.x.x",
-    "exiting": "6.x.x",
-    "hapi-swagger": "14.x.x"
+    "hapi-swagger": "14.x.x",
+    "@hapipal/hpal": "3.x.x",
+    "@hapipal/hpal-debug": "2.x.x",
+    "knex": "^0.21.16",
+    "@hapipal/toys": "3.x.x"
   }
 }

@@ -13,14 +13,14 @@ module.exports = new Confidence.Store({
     server: {
         host: 'localhost',
         port: {
-            $param: 'PORT',
+            $env: 'PORT',
             $coerce: 'number',
             $default: 3000
         },
         debug: {
-            $filter: 'NODE_ENV',
+            $filter: { $env: 'NODE_ENV' },
             $default: {
-                log: ['error', 'start'],
+                log: ['error'],
                 request: ['error']
             },
             production: {
@@ -47,13 +47,10 @@ module.exports = new Confidence.Store({
                         knex: {
                             client: 'mysql',
                             connection: {
-                                host: process.env.DB_HOST || '0.0.0.0',
+                                host: process.env.DB_HOST || 'localhost',
                                 user: process.env.DB_USER || 'root',
                                 password: process.env.DB_PASSWORD || 'root',
                                 database: process.env.DB_DATABASE || 'nodejs'
-                            },
-                            migrations: {
-                                stub: Schwifty.migrationsStubPath
                             }
                         }
                     },
@@ -64,7 +61,7 @@ module.exports = new Confidence.Store({
             },
             {
                 plugin: {
-                    $filter: 'NODE_ENV',
+                    $filter: { $env: 'NODE_ENV' },
                     $default: '@hapipal/hpal-debug',
                     production: Toys.noop
                 }
